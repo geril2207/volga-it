@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  padding: 14px 25px;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow_next {
+  cursor: pointer;
+}
