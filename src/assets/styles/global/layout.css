@@ -1,0 +1,17 @@
+.main_content_wrapper {
+  padding: 50px 66px 25px;
+  text-align: center;
+}
+
+.main_content_title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  max-width: 330px;
+  color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+}
