@@ -1,13 +1,12 @@
 import React from 'react'
-import { FirstPage } from 'components/Pages'
-import { Header, StartPage } from './components'
+import { FirstPage, Header, SecondPage, StartPage } from './components'
 
 function App() {
   return (
     <div className="app">
       <Header />
       <div className="app_body">
-        <FirstPage />
+        <SecondPage />
       </div>
     </div>
   )

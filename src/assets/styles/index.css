@@ -17,6 +17,12 @@ body {
 .app_body {
   flex: 1 1 auto;
   background: linear-gradient(180deg, #e8f0f2 0%, rgba(232, 240, 242, 0) 100%);
+  padding: 50px 66px 25px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @import url('global/layout.css');
