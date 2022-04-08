@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './FirstPage.module.css'
 import womenImg from 'assets/img/stages/1/women.svg'
 import manImg from 'assets/img/stages/1/man.svg'
+import { Store } from 'store'
 
 const FirstPage = () => {
+  const ctx = useContext(Store)
+  console.log(ctx)
+
   return (
     <>
       <div>

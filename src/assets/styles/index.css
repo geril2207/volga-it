@@ -12,6 +12,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .app_body {
@@ -23,6 +24,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  animation: showBlock 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes showBlock {
+  0% {
+    transform: translate(100%, 0);
+  }
+  10% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 @import url('global/layout.css');
+@import url('global/middleware-pages.css');
