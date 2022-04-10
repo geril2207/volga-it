@@ -1,0 +1,21 @@
+.middleware_like_wrap {
+  background: #f7f8f9;
+  box-shadow: -9px -9px 16px #ffffff, 9px 9px 16px rgba(163, 177, 198, 0.325148);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.middleware_text_content {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #0196ff;
+  margin-top: 40px;
+}

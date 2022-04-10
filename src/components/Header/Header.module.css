@@ -1,8 +1,9 @@
 .wrapper {
   width: 100%;
-  padding: 14px 25px;
 }
 .inner {
+  padding: 14px 25px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,4 +11,19 @@
 
 .arrow_next {
   cursor: pointer;
+}
+
+.page_line_wrapper {
+  width: 100%;
+  height: 8px;
+  background: #d8d8d8;
+}
+
+.page_line {
+  width: 20%;
+  background: linear-gradient(290.47deg, #3797fa 11.33%, #45c9ff 83.66%);
+  height: 8px;
+  border-radius: 0px 4px 4px 0px;
+  transition: width 0.2s linear;
+  animation: line 3s linear;
 }

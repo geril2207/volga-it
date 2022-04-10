@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.scss'
+import 'assets/styles/index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { StoreProvider } from 'store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StoreProvider>
+      <App />
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById('glasses-quiz-widget')
 )

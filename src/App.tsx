@@ -1,12 +1,18 @@
 import React from 'react'
-import { Header, StartPage } from './components'
+import {
+  Between23and4,
+  FirstPage,
+  Header,
+  SecondPage,
+  StartPage,
+} from './components'
 
 function App() {
   return (
     <div className="app">
       <Header />
       <div className="app_body">
-        <StartPage />
+        <FirstPage />
       </div>
     </div>
   )
