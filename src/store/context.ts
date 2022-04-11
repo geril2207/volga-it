@@ -1,17 +1,13 @@
 import { createContext } from 'react'
-import {
-  IParamsInitStore,
-  paramsInitState,
-  paramsReducer,
-} from './params/reducer'
+import { IParamsStore, paramsInitState, paramsReducer } from './params/reducer'
 import {
   ITranstitionsStore,
   transitionsInitState,
   transitionsReducer,
 } from './transitions/reducer'
 
-interface IInitialStore {
-  params: IParamsInitStore
+export interface IInitialStore {
+  params: IParamsStore | void // TODO Понять откуда взялся void
   transitions: ITranstitionsStore
 }
 
@@ -30,9 +26,9 @@ export const StoreContext = createContext<IStoreContext>({
   dispatch: () => null,
 })
 
-export const storeReducer = ({ params, transitions }, action: any) => ({
-  params: paramsReducer(params, action),
+export const storeReducer = ({ params, transitions }, action) => ({
   transitions: transitionsReducer(transitions, action),
+  params: paramsReducer(params, action),
 })
 
 export default StoreContext

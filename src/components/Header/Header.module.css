@@ -1,8 +1,9 @@
 .wrapper {
   width: 100%;
+  max-height: 66px;
 }
 .inner {
-  padding: 14px 25px;
+  padding: 18px 25px;
 
   display: flex;
   justify-content: space-between;
@@ -20,10 +21,18 @@
 }
 
 .page_line {
-  width: 20%;
   background: linear-gradient(290.47deg, #3797fa 11.33%, #45c9ff 83.66%);
   height: 8px;
   border-radius: 0px 4px 4px 0px;
   transition: width 0.2s linear;
   animation: line 3s linear;
+}
+
+.arrow_back_wrapper {
+  display: flex;
+  align-items: center;
+}
+.exit {
+  display: flex;
+  align-items: center;
 }

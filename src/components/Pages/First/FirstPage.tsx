@@ -1,12 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from './FirstPage.module.css'
 import womenImg from 'assets/img/stages/1/women.svg'
 import manImg from 'assets/img/stages/1/man.svg'
 import { Store } from 'store'
+import { useSelector } from 'hooks/useSelector'
+import { useDispatch } from 'hooks/useDispatch'
+import { setValue } from 'store/params/actions'
 
 const FirstPage = () => {
-  const ctx = useContext(Store)
-  console.log(ctx)
+  const state = useSelector((state) => state)
+  const dispatch = useDispatch()
+
 
   return (
     <>
@@ -17,7 +21,10 @@ const FirstPage = () => {
             <img src={womenImg} alt="" />
             Women's Styles
           </div>
-          <div className="item first_and_second_item">
+          <div
+            className="item first_and_second_item"
+            onClick={() => dispatch(setValue('gender', 1))}
+          >
             <img src={manImg} alt="" />
             Men's Styles
           </div>

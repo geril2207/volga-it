@@ -1,6 +1,11 @@
-enum ActionTypes {
-    
+export enum ActionTypes {
+  SET_VALUE = 'SET_VALUE',
 }
 
-type ActionType = 1
+export interface ISetValue {
+  type: ActionTypes.SET_VALUE
+  payload: any
+}
+
+type ActionType = ISetValue
 export default ActionType
