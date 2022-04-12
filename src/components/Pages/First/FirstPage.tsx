@@ -17,7 +17,7 @@ const FirstPage = () => {
   }
 
   return (
-    <div className='anim'>
+    <>
       <div>
         <h4 className="content__title">You are looking for</h4>
         <div className="item_wrapper">
@@ -38,7 +38,7 @@ const FirstPage = () => {
         </div>
       </div>
       <div className="bottom_link">I'd like to see both</div>
-    </div>
+    </>
   )
 }
 

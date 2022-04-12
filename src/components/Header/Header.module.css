@@ -31,8 +31,10 @@
 .arrow_back_wrapper {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .exit {
+  cursor: pointer;
   display: flex;
   align-items: center;
 }

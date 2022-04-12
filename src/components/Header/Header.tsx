@@ -21,6 +21,7 @@ const Header = () => {
   function changePageHandler(page: transitionsCurrentPage = 'start') {
     dispatch(setPage(page))
   }
+  console.log(currentPage)
 
   return (
     <header className={styles.wrapper}>

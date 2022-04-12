@@ -1,6 +1,7 @@
 import { useSelector } from 'hooks/useSelector'
 import React from 'react'
 import FirstPage from '../First/FirstPage'
+import PageLayout from '../PageLayout/PageLayout'
 import SecondPage from '../Second/SecondPage'
 import StartPage from '../StartPage/StartPage'
 
@@ -9,13 +10,13 @@ const PagesRouter = () => {
 
   switch (currentPage) {
     case 1:
-      return <FirstPage />
+      return <PageLayout page={FirstPage} />
     case 2:
-      return <SecondPage />
+      return <PageLayout page={SecondPage} />
     case 10:
       return <SecondPage />
     default:
-      return <StartPage />
+      return <PageLayout page={StartPage} />
   }
 }
 
