@@ -7,7 +7,7 @@ import styles from './Header.module.css'
 import { Store } from 'store'
 import { useSelector } from 'hooks/useSelector'
 import { useDispatch } from 'hooks/useDispatch'
-import { setPage } from 'store/transitions/actions'
+import { moveBack, setPage } from 'store/transitions/actions'
 import { transitionsCurrentPage } from 'store/transitions/reducer'
 
 const Header = () => {
@@ -37,7 +37,10 @@ const Header = () => {
           </>
         ) : (
           <>
-            <div className={styles.arrow_back_wrapper}>
+            <div
+              className={styles.arrow_back_wrapper}
+              onClick={() => dispatch(moveBack())}
+            >
               <img src={backImg} alt="Назад" />
             </div>
             <div className="show_page">{displayPage} / 10</div>

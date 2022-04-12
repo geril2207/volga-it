@@ -6,24 +6,31 @@ import { Store } from 'store'
 import { useSelector } from 'hooks/useSelector'
 import { useDispatch } from 'hooks/useDispatch'
 import { setValue } from 'store/params/actions'
+import { setPage } from 'store/transitions/actions'
 
 const FirstPage = () => {
-  const state = useSelector((state) => state)
   const dispatch = useDispatch()
 
+  function clickHandler(value) {
+    dispatch(setValue('gender', value))
+    dispatch(setPage(2))
+  }
 
   return (
-    <>
+    <div className='anim'>
       <div>
         <h4 className="content__title">You are looking for</h4>
         <div className="item_wrapper">
-          <div className="item first_and_second_item">
+          <div
+            className="item first_and_second_item"
+            onClick={() => clickHandler(5)}
+          >
             <img src={womenImg} alt="" />
             Women's Styles
           </div>
           <div
             className="item first_and_second_item"
-            onClick={() => dispatch(setValue('gender', 1))}
+            onClick={() => clickHandler(4)}
           >
             <img src={manImg} alt="" />
             Men's Styles
@@ -31,7 +38,7 @@ const FirstPage = () => {
         </div>
       </div>
       <div className="bottom_link">I'd like to see both</div>
-    </>
+    </div>
   )
 }
 

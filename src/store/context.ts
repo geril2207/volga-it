@@ -1,5 +1,7 @@
 import { createContext } from 'react'
+import paramsActionType from './params/actionTypes'
 import { IParamsStore, paramsInitState, paramsReducer } from './params/reducer'
+import transitionsActionType from './transitions/actionTypes'
 import {
   ITranstitionsStore,
   transitionsInitState,
@@ -7,13 +9,8 @@ import {
 } from './transitions/reducer'
 
 export interface IInitialStore {
-  params: IParamsStore | void // TODO Понять откуда взялся void
+  params: IParamsStore
   transitions: ITranstitionsStore
-}
-
-interface IStoreContext {
-  state: IInitialStore
-  dispatch: React.Dispatch<any>
 }
 
 export const InitState: IInitialStore = {
@@ -21,7 +18,10 @@ export const InitState: IInitialStore = {
   transitions: transitionsInitState,
 }
 
-export const StoreContext = createContext<IStoreContext>({
+export const StoreContext = createContext<{
+  state: IInitialStore
+  dispatch: React.Dispatch<transitionsActionType | paramsActionType>
+}>({
   state: InitState,
   dispatch: () => null,
 })

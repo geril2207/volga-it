@@ -7,5 +7,5 @@ export interface ISetValue {
   payload: any
 }
 
-type ActionType = ISetValue
-export default ActionType
+type paramsActionType = ISetValue
+export default paramsActionType

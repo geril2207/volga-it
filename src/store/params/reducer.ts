@@ -1,4 +1,4 @@
-import ActionType, { ActionTypes } from './actionTypes'
+import paramsActionType, { ActionTypes } from './actionTypes'
 
 export interface IParamsStore {
   gender: 4 | 5 | null
@@ -28,7 +28,7 @@ export const paramsInitState: IParamsStore = {
   brand: null,
 }
 
-export const paramsReducer = (state = paramsInitState, action: ActionType) => {
+export const paramsReducer = (state = paramsInitState, action: paramsActionType) => {
   switch (action.type) {
     case ActionTypes.SET_VALUE:
       return { ...state, ...action.payload }

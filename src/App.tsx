@@ -1,3 +1,4 @@
+import PagesRouter from 'components/Pages/PagesRouter/PagesRouter'
 import { useSelector } from 'hooks/useSelector'
 import React from 'react'
 import {
@@ -16,7 +17,7 @@ function App() {
     <div className="app">
       <Header />
       <div className="app_body">
-        <FirstPage />
+        <PagesRouter />
       </div>
     </div>
   )
