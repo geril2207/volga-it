@@ -17,7 +17,7 @@ export type KeysStoreTypes = keyof IParamsStore
 
 export const paramsInitState: IParamsStore = {
   gender: null,
-  eyewear_type: null,
+  eyewear_type: 211,
   lenstype: null,
   shade: null,
   frame_size: null,
@@ -28,10 +28,15 @@ export const paramsInitState: IParamsStore = {
   brand: null,
 }
 
-export const paramsReducer = (state = paramsInitState, action: paramsActionType) => {
+export const paramsReducer = (
+  state = paramsInitState,
+  action: paramsActionType
+) => {
   switch (action.type) {
     case ActionTypes.SET_VALUE:
       return { ...state, ...action.payload }
+    case ActionTypes.RESET_VALUES:
+      return { ...paramsInitState }
     default:
       return state
   }

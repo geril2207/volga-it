@@ -1,13 +1,6 @@
-import PagesRouter from 'components/Pages/PagesRouter/PagesRouter'
 import { useSelector } from 'hooks/useSelector'
 import React from 'react'
-import {
-  Between23and4,
-  FirstPage,
-  Header,
-  SecondPage,
-  StartPage,
-} from './components'
+import { Header, PagesRouter } from './components'
 
 function App() {
   const state = useSelector()

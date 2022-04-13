@@ -1,4 +1,4 @@
-import { ActionTypes, IMoveBack, ISetPage } from './actionTypes'
+import { ActionTypes, IMoveBack, IMoveForward, ISetPage } from './actionTypes'
 import { transitionsCurrentPage } from './reducer'
 
 export const setPage = (page: transitionsCurrentPage): ISetPage => ({
@@ -8,4 +8,8 @@ export const setPage = (page: transitionsCurrentPage): ISetPage => ({
 
 export const moveBack = (): IMoveBack => ({
   type: ActionTypes.MOVE_BACK,
+})
+
+export const moveForward = (): IMoveForward => ({
+  type: ActionTypes.MOVE_FORWARD,
 })

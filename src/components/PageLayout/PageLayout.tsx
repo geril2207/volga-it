@@ -1,12 +1,19 @@
 import { useSelector } from 'hooks/useSelector'
-import React, { useEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 
-const PageLayout = ({ page: Page }) => {
+interface IPageLayout {
+  page: React.FC
+}
+
+const PageLayout = ({ page: Page }: IPageLayout) => {
   const moveTo = useSelector((state) => state.transitions.moveTo)
   const pageWrapper = useRef<HTMLDivElement>(null)
   const animStyle = moveTo === 'next' ? 'show_forw' : 'show_back'
-  useEffect(() => {
+
+  // TODO Сделать анимацию если 300 мс не прошло
+  useLayoutEffect(() => {
     if (pageWrapper.current) {
+      pageWrapper.current?.classList.remove('animated')
       pageWrapper.current.classList.add(animStyle)
       setTimeout(() => {
         pageWrapper.current?.classList.remove(animStyle)

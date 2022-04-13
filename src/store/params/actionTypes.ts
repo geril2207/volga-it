@@ -1,5 +1,6 @@
 export enum ActionTypes {
   SET_VALUE = 'SET_VALUE',
+  RESET_VALUES = 'RESET_VALUES',
 }
 
 export interface ISetValue {
@@ -7,5 +8,8 @@ export interface ISetValue {
   payload: any
 }
 
-type paramsActionType = ISetValue
+export interface IResetValues {
+  type: ActionTypes.RESET_VALUES
+}
+type paramsActionType = ISetValue | IResetValues
 export default paramsActionType

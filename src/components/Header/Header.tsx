@@ -8,21 +8,34 @@ import { Store } from 'store'
 import { useSelector } from 'hooks/useSelector'
 import { useDispatch } from 'hooks/useDispatch'
 import { moveBack, setPage } from 'store/transitions/actions'
-import { transitionsCurrentPage } from 'store/transitions/reducer'
+import {
+  ITranstitionsStore,
+  transitionsCurrentPage,
+} from 'store/transitions/reducer'
+import { resetValues } from 'store/params/actions'
 
 const Header = () => {
-  const currentPage: string | number = useSelector(
-    (state) => state.transitions.currentPage
+  const { currentPage, previousPage }: ITranstitionsStore = useSelector(
+    (state) => state.transitions
   )
   const dispatch = useDispatch()
+  // console.log(currentPage, previousPage)
 
-  const displayPage = Math.floor(+currentPage)
+  const displayPage =
+    currentPage === 'm3'
+      ? 3
+      : currentPage === 'm4'
+      ? 4
+      : Math.floor(+currentPage)
 
   function changePageHandler(page: transitionsCurrentPage = 'start') {
     dispatch(setPage(page))
   }
-  console.log(currentPage)
 
+  function toHomePageHandler() {
+    dispatch(setPage('start'))
+    dispatch(resetValues())
+  }
   return (
     <header className={styles.wrapper}>
       <div className={styles.inner}>
@@ -45,10 +58,7 @@ const Header = () => {
               <img src={backImg} alt="Назад" />
             </div>
             <div className="show_page">{displayPage} / 10</div>
-            <div
-              className={styles.exit}
-              onClick={() => changePageHandler('start')}
-            >
+            <div className={styles.exit} onClick={toHomePageHandler}>
               <img src={exitImg} alt="Закрыть" />
             </div>
           </>

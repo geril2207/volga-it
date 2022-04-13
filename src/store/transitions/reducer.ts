@@ -1,6 +1,6 @@
 import transitionsActionType, { ActionTypes } from './actionTypes'
 
-export type transitionsCurrentPage = number | 'start'
+export type transitionsCurrentPage = number | 'start' | 'm3' | 'm4'
 export type transitionsMoveTo = 'back' | 'next'
 export interface ITranstitionsStore {
   currentPage: transitionsCurrentPage
@@ -9,9 +9,28 @@ export interface ITranstitionsStore {
 }
 
 export const transitionsInitState: ITranstitionsStore = {
-  currentPage: 'start',
+  currentPage: 5,
   previousPage: [],
   moveTo: 'next',
+}
+
+const nextPage = (
+  currentPage: transitionsCurrentPage
+): transitionsCurrentPage => {
+  switch (currentPage) {
+    case 'start':
+      return 1
+    case 2:
+      return 'm3'
+    case 'm3':
+      return 3
+    case 'm4':
+      return 4.2
+    default:
+      break
+  }
+  if (typeof currentPage === 'number') return Math.floor(currentPage + 1)
+  return 'start'
 }
 
 export const transitionsReducer = (
@@ -53,6 +72,18 @@ export const transitionsReducer = (
         moveTo: moveToBack,
         previousPage: prevPages,
         currentPage: state.previousPage[state.previousPage.length - 1],
+      }
+    case ActionTypes.MOVE_FORWARD:
+      const moveTo: transitionsMoveTo = 'next'
+      const previousPages =
+        state.currentPage === 'm3' || state.currentPage === 'm4'
+          ? [...state.previousPage]
+          : [...state.previousPage, state.currentPage]
+      return {
+        ...state,
+        moveTo,
+        previousPage: previousPages,
+        currentPage: nextPage(state.currentPage),
       }
     default:
       return state
