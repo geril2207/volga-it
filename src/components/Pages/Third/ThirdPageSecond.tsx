@@ -1,6 +1,5 @@
 import React from 'react'
 import BottomLink from 'components/BottomLink/BottomLink'
-import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
 import { IPage } from '../types'
 
 const ThirdPageSecond: React.FC<IPage> = ({ dispatch }) => {

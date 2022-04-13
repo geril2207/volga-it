@@ -4,7 +4,6 @@ import womenImg from 'assets/img/stages/1/women.svg'
 import manImg from 'assets/img/stages/1/man.svg'
 import { Store } from 'store'
 import BottomLink from '../../BottomLink/BottomLink'
-import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
 import { IPage } from '../types'
 
 const FirstPage: React.FC<IPage> = ({ dispatch }) => {
