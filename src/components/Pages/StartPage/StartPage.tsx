@@ -6,7 +6,6 @@ import { setPage } from 'store/transitions/actions'
 
 const StartPage = () => {
   const dispatch = useDispatch()
-
   function toNextPage() {
     dispatch(setPage(1))
   }

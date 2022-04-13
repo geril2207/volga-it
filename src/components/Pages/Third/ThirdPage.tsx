@@ -1,9 +1,10 @@
-import { useDispatch } from 'hooks/useDispatch'
 import React from 'react'
+import { useDispatch } from 'hooks/useDispatch'
 import { moveForward, setPage } from 'store/transitions/actions'
 import BottomLink from '../../BottomLink/BottomLink'
+import { IPage } from '../types'
 
-const ThirdPage = () => {
+const ThirdPage: React.FC<IPage> = () => {
   const dispatch = useDispatch()
 
   function toThirdPTwoHandler() {

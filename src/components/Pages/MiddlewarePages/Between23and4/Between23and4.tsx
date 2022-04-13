@@ -4,8 +4,9 @@ import { useDispatch } from 'hooks/useDispatch'
 import { moveForward } from 'store/transitions/actions'
 import { useSelector } from 'hooks/useSelector'
 import { transitionsCurrentPage } from 'store/transitions/reducer'
+import { IPage } from 'components/Pages/types'
 
-const Between23And4 = () => {
+const Between23And4: React.FC<IPage> = () => {
   const dispatch = useDispatch()
   const currentPage: transitionsCurrentPage = useSelector(
     (state) => state.transitions.currentPage

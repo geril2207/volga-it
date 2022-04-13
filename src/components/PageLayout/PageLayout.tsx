@@ -1,14 +1,17 @@
+import { IPage } from 'components/Pages/types'
 import { useSelector } from 'hooks/useSelector'
+import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
 import React, { useLayoutEffect, useRef } from 'react'
 
 interface IPageLayout {
-  page: React.FC
+  page: React.FC<IPage>
 }
 
-const PageLayout = ({ page: Page }: IPageLayout) => {
+const PageLayout: React.FC<IPageLayout> = ({ page: Component }) => {
   const moveTo = useSelector((state) => state.transitions.moveTo)
   const pageWrapper = useRef<HTMLDivElement>(null)
   const animStyle = moveTo === 'next' ? 'show_forw' : 'show_back'
+  const dispatch = useSetValueAndMoveForward()
 
   // TODO Сделать анимацию если 300 мс не прошло
   useLayoutEffect(() => {
@@ -20,11 +23,11 @@ const PageLayout = ({ page: Page }: IPageLayout) => {
         pageWrapper.current?.classList.add('animated')
       }, 300)
     }
-  }, [Page, animStyle])
+  }, [Component, animStyle])
 
   return (
     <div className={`page_wrapper ${animStyle}`} ref={pageWrapper}>
-      <Page />
+      {<Component dispatch={dispatch} />}
     </div>
   )
 }

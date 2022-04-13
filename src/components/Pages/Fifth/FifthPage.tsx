@@ -1,13 +1,11 @@
 import React from 'react'
-import BottomLink from 'components/BottomLink/BottomLink'
-import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
 import { useSelector } from 'hooks/useSelector'
 import FifthEyeGlasses from './components/FifthEyeGlasses'
 import FifthSunGlasses from './components/FifthSunGlasses'
+import { IPage } from '../types'
 
-const FifthPage = () => {
+const FifthPage: React.FC<IPage> = ({ dispatch }) => {
   const type = useSelector((state) => state.params.eyewear_type)
-  const dispatch = useSetValueAndMoveForward()
 
   const clickHandler = (type, value) => {
     return () => {

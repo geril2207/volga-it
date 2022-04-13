@@ -1,10 +1,9 @@
 import React from 'react'
 import BottomLink from 'components/BottomLink/BottomLink'
 import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
+import { IPage } from '../types'
 
-const ThirdPageSecond = () => {
-  const dispatch = useSetValueAndMoveForward()
-
+const ThirdPageSecond: React.FC<IPage> = ({ dispatch }) => {
   const clickHandler = (value: 5 | 6 | 7) => {
     return () => {
       dispatch('lenstype', value)

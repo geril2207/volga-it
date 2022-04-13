@@ -1,10 +1,10 @@
 import React from 'react'
-import frameSizeImg from 'assets/img/stages/4/sizes.png'
 import BottomLink from 'components/BottomLink/BottomLink'
 import styles from './FourthPageSecond.module.scss'
 import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
+import { IPage } from '../types'
 
-const FourthPageSecond = () => {
+const FourthPageSecond: React.FC<IPage> = () => {
   const dispatch = useSetValueAndMoveForward()
 
   const clickHandler = (value) => {
