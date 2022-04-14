@@ -146,15 +146,15 @@
     transform: none;
   }
 }
-
+// cubic-bezier(0.165, 0.84, 0.44, 1)
 .show_back {
   transform: translate(-100%, 0);
-  animation: showBackward 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: showBackward 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .show_forw {
   transform: translate(100%, 0);
-  animation: showForward 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: showForward 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .third_item {
