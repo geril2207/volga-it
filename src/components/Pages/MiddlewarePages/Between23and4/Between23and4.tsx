@@ -18,11 +18,11 @@ const Between23And4: React.FC<IPage> = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       dispatch(moveForward())
-    }, 100)
+    }, 1000)
     return () => {
       clearTimeout(timeout)
     }
-  }, [])
+  }, [dispatch])
 
   return (
     <div>

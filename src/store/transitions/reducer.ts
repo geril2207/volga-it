@@ -9,7 +9,7 @@ export interface ITranstitionsStore {
 }
 
 export const transitionsInitState: ITranstitionsStore = {
-  currentPage: 5,
+  currentPage: 'start',
   previousPage: [],
   moveTo: 'next',
 }
