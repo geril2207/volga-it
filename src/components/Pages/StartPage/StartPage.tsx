@@ -17,9 +17,9 @@ const StartPage = () => {
         Take the quiz to easily discover your perfect fit from thousands of
         styles
       </div>
-      <div className={styles.btn} onClick={toNextPage}>
+      <button className={`btn ${styles.btn}`} onClick={toNextPage}>
         Start now
-      </div>
+      </button>
     </div>
   )
 }

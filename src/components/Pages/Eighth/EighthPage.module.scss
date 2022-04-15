@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 48px;
+  max-width: 180px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  &:disabled {
+    background: #dedede;
+    cursor: not-allowed;
+  }
+}
+
+.btn[disabled] {
+  background: #dedede;
+  cursor: not-allowed;
+}

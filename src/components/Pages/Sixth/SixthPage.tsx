@@ -42,7 +42,7 @@ const SixthPage: React.FC<IPage> = ({ dispatch }) => {
     <>
       <div>
         <h4 className="content__title">
-          When you’re out and about, which shade of lenses do you prefer?
+          Every face shape has a perfect fit. What’s yours?
         </h4>
         <div className="item_wrapper">
           <div className={`item sixth__item`} onClick={clickHandler('long')}>

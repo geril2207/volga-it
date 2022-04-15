@@ -10,11 +10,14 @@ export const useSwipe = () => {
     start: 0,
     end: 0,
   }
+
   const touchStartHandler = (e) => {
+    return
     cords.start = e.changedTouches[0].screenX
   }
 
   const touchEndHandler = (e) => {
+    return
     cords.end = e.changedTouches[0].screenX
     const difference = cords.end - cords.start
     if (difference < -40) skipPageHandler()

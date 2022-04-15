@@ -67,6 +67,14 @@
   color: #0f0f0f;
 }
 
+.content__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #697580;
+}
+
 .item_wrapper {
   display: flex;
   flex-direction: column;
@@ -166,4 +174,18 @@
   div {
     max-width: 96px;
   }
+}
+
+.eighth__item {
+  @include item-border();
+}
+.container__scrollable {
+  transition: transform 0.05s linear;
+}
+
+.btn {
+  background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+  border: none;
 }

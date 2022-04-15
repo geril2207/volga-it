@@ -14,6 +14,7 @@ import {
   SeventhPage,
   Between23And4,
   StartPage,
+  EighthPage,
 } from 'components/Pages'
 import { PageLayout } from 'components'
 import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
@@ -49,6 +50,7 @@ const components = {
   5: FifthPage,
   6: SixthPage,
   7: SeventhPage,
+  8: EighthPage,
   m3: Between23And4,
   start: StartPage,
 }
@@ -57,6 +59,7 @@ const PagesRouter = () => {
   const currentPage: transitionsCurrentPage = useSelector(
     (state) => state.transitions.currentPage
   )
+
   const {
     touchEndHandler,
     touchStartHandler,
