@@ -21,8 +21,7 @@ export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
   const dispatch = useDispatch()
 
   const skipPageHandler = () => {
-    if (pagesToValues[currentPage])
-      dispatch(setValue(pagesToValues[currentPage], null))
+    if (pagesToValues[currentPage]) dispatch(setValue(pagesToValues[currentPage], null))
     dispatch(toPage ? setPage(toPage) : moveForward())
   }
   return skipPageHandler

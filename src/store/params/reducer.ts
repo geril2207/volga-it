@@ -28,13 +28,13 @@ export const paramsInitState: IParamsStore = {
   brand: null,
 }
 
-export const paramsReducer = (
-  state = paramsInitState,
-  action: paramsActionType
-) => {
+export const paramsReducer = (state = paramsInitState, action: paramsActionType) => {
   switch (action.type) {
     case ActionTypes.SET_VALUE:
-      return { ...state, ...action.payload }
+      const [key, value] = action.payload
+      console.log(1)
+
+      return { ...state, [key]: value }
     case ActionTypes.RESET_VALUES:
       return { ...paramsInitState }
     default:

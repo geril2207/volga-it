@@ -178,9 +178,17 @@
 
 .eighth__item {
   @include item-border();
-}
-.container__scrollable {
-  transition: transform 0.05s linear;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  &.eigtht__item_selected {
+    border: 2px solid #2196f3;
+    box-shadow: 0px 1px 0px rgba(58, 72, 80, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.08);
+    & .eighth__item_check {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 .btn {

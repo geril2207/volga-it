@@ -24,7 +24,6 @@ export type glassesItemsValue =
   | 'wayframe'
   | 'wrap'
   | 'reactangle'
-  | null
 interface Item {
   title: string
   img: string
@@ -78,7 +77,7 @@ export const glassesItems: Item[] = [
     value: 'square',
   },
   {
-    title: 'wayframeImg',
+    title: 'Wayframe',
     img: wayframeImg,
     value: 'wayframe',
   },
