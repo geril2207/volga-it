@@ -24,7 +24,6 @@ export type glassesItemsValue =
   | 'wayframe'
   | 'wrap'
   | 'reactangle'
-  | null
 interface Item {
   title: string
   img: string

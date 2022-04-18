@@ -1,3 +1,5 @@
+import { KeysStoreTypes } from './reducer'
+
 export enum ActionTypes {
   SET_VALUE = 'SET_VALUE',
   RESET_VALUES = 'RESET_VALUES',
@@ -5,7 +7,7 @@ export enum ActionTypes {
 
 export interface ISetValue {
   type: ActionTypes.SET_VALUE
-  payload: any
+  payload: [KeysStoreTypes, string | number | boolean | null]
 }
 
 export interface IResetValues {

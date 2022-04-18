@@ -1,25 +1,22 @@
 import HorizontalScrollable from 'components/HorizontalDraggable/HorizontalScrollable'
-import withAnim from 'hoc/withAnim'
 import { useDispatch } from 'hooks/useDispatch'
 import { useSelector } from 'hooks/useSelector'
-import React, { useState } from 'react'
+import React from 'react'
 import { setValue } from 'store/params/actions'
 import { moveForward } from 'store/transitions/actions'
-import { IPage } from '../types'
-import styles from './EighthPage.module.scss'
-import { glassesItems, glassesItemsValue } from './EighthPageItems'
+import { brandsItems } from './TenthPageItems'
 
-const EighthPage: React.FC<IPage> = () => {
-  const selectedItems: string[] = useSelector((state) => state.params.shape)
+const TenthPage = () => {
+  const brandItems: string[] = useSelector((state) => state.params.brand)
   const dispatch = useDispatch()
   const selectHandler = (value: string) => () => {
-    return dispatch(setValue('shape', value))
+    return dispatch(setValue('brand', value))
   }
 
   const nextHandler = () => () => {
     return dispatch(moveForward())
   }
-  console.log(selectedItems)
+  console.log(brandItems)
 
   return (
     <>
@@ -27,9 +24,9 @@ const EighthPage: React.FC<IPage> = () => {
         <h4 className="content__title">Which frame style are you looking for?</h4>
         <h6 className="content__subtitle">You can pick more than one.</h6>
         <HorizontalScrollable>
-          <div className={styles.grid}>
-            {glassesItems.map((item, index) => {
-              const isItemExists = selectedItems.includes(item.value)
+          <div className="grid__container">
+            {brandsItems.map((item, index) => {
+              const isItemExists = brandItems.includes(item.value)
               return (
                 <div
                   className={`eighth__item ${isItemExists ? 'selected' : ''}`}
@@ -39,7 +36,6 @@ const EighthPage: React.FC<IPage> = () => {
                   <div>
                     <img src={item.img} alt="Glasses" />
                   </div>
-                  <div>{item.title}</div>
                 </div>
               )
             })}
@@ -47,8 +43,8 @@ const EighthPage: React.FC<IPage> = () => {
         </HorizontalScrollable>
       </div>
       <button
-        className={`btn ${styles.btn}`}
-        disabled={!selectedItems.length}
+        className={`btn custom__button`}
+        disabled={!brandItems.length}
         onClick={nextHandler()}
       >
         Continue
@@ -57,4 +53,4 @@ const EighthPage: React.FC<IPage> = () => {
   )
 }
 
-export default EighthPage
+export default TenthPage

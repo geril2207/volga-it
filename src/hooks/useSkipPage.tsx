@@ -12,8 +12,6 @@ const pagesToValues = {
   5: 'blue_light',
   6: 'face_shape',
   7: 'facial_features',
-  8: 'shape',
-  10: 'brand',
 }
 
 export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
@@ -21,8 +19,7 @@ export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
   const dispatch = useDispatch()
 
   const skipPageHandler = () => {
-    if (pagesToValues[currentPage])
-      dispatch(setValue(pagesToValues[currentPage], null))
+    if (pagesToValues[currentPage]) dispatch(setValue(pagesToValues[currentPage], null))
     dispatch(toPage ? setPage(toPage) : moveForward())
   }
   return skipPageHandler

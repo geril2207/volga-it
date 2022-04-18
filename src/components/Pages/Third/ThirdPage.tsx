@@ -18,10 +18,7 @@ const ThirdPage: React.FC<IPage> = () => {
           <div className="item third_item" onClick={toThirdPTwoHandler}>
             Yes
           </div>
-          <div
-            className="item third_item"
-            onClick={() => dispatch(moveForward())}
-          >
+          <div className="item third_item" onClick={() => dispatch(moveForward())}>
             No
           </div>
         </div>
