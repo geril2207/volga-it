@@ -9,8 +9,8 @@ export interface IParamsStore {
   shade: 'dark' | 'ligth' | 'transition' | null
   face_shape: 'long' | 'round' | 'between' | null
   facial_features: 'sharp' | 'rounded' | 'between' | null
-  shape: string | null
-  brand: string | null
+  shape: string[]
+  brand: string[]
 }
 
 export type KeysStoreTypes = keyof IParamsStore
@@ -23,17 +23,24 @@ export const paramsInitState: IParamsStore = {
   frame_size: null,
   blue_light: false,
   facial_features: null,
-  shape: null,
   face_shape: null,
-  brand: null,
+  shape: [],
+  brand: [],
 }
 
 export const paramsReducer = (state = paramsInitState, action: paramsActionType) => {
   switch (action.type) {
     case ActionTypes.SET_VALUE:
       const [key, value] = action.payload
-      console.log(1)
-
+      if (key === 'shape' || key === 'brand') {
+        const isItemExists = typeof value === 'string' ? state[key].includes(value) : false
+        if (isItemExists)
+          return {
+            ...state,
+            [key]: state[key].filter((item) => item !== value),
+          }
+        return { ...state, [key]: [...state[key], value] }
+      }
       return { ...state, [key]: value }
     case ActionTypes.RESET_VALUES:
       return { ...paramsInitState }

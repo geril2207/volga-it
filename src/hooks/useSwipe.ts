@@ -6,18 +6,21 @@ import { useSkipPage } from './useSkipPage'
 export const useSwipe = () => {
   const dispatch = useDispatch()
   const skipPageHandler = useSkipPage()
-  let cords = {
+  let cords: { start: number; end: number; isElemScrollable: boolean } = {
     start: 0,
     end: 0,
+    isElemScrollable: false,
   }
 
   const touchStartHandler = (e) => {
-    return
+    if (e.target.offsetParent.classList.contains('container__scrollable'))
+      return (cords.isElemScrollable = true)
     cords.start = e.changedTouches[0].screenX
+    cords.isElemScrollable = false
   }
 
   const touchEndHandler = (e) => {
-    return
+    if (cords.isElemScrollable) return
     cords.end = e.changedTouches[0].screenX
     const difference = cords.end - cords.start
     if (difference < -40) skipPageHandler()

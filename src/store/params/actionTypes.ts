@@ -7,7 +7,7 @@ export enum ActionTypes {
 
 export interface ISetValue {
   type: ActionTypes.SET_VALUE
-  payload: [KeysStoreTypes, string]
+  payload: [KeysStoreTypes, string | number | boolean | null]
 }
 
 export interface IResetValues {

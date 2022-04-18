@@ -178,17 +178,7 @@
 
 .eighth__item {
   @include item-border();
-  position: relative;
-  border: 2px solid transparent;
-  transition: all 0.2s ease-in-out;
-  &.eigtht__item_selected {
-    border: 2px solid #2196f3;
-    box-shadow: 0px 1px 0px rgba(58, 72, 80, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.08);
-    & .eighth__item_check {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
+  height: 103px;
 }
 
 .btn {
@@ -197,3 +187,41 @@
   border-radius: 24px;
   border: none;
 }
+
+.selected {
+  border: 1px solid blue;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.custom__button {
+  height: 48px;
+  max-width: 180px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  &:disabled {
+    background: #dedede;
+    cursor: not-allowed;
+  }
+  &[disabled] {
+    background: #dedede;
+    cursor: not-allowed;
+  }
+}
+
+
+
+

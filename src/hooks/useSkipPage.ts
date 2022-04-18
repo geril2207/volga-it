@@ -12,8 +12,6 @@ const pagesToValues = {
   5: 'blue_light',
   6: 'face_shape',
   7: 'facial_features',
-  8: 'shape',
-  10: 'brand',
 }
 
 export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
