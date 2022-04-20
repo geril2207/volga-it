@@ -26,35 +26,33 @@ const Header = () => {
   }
   return (
     <header className={styles.wrapper}>
-      <div className={styles.inner}>
-        {currentPage === 'start' ? (
-          <>
-            <img src={logoImg} alt="Логотип" />
-            <img
-              className={styles.arrow_next}
-              src={arrowRightImg}
-              alt="Далее"
-              onClick={() => changePageHandler(1)}
-            />
-          </>
-        ) : (
-          <>
-            {currentPage !== 11 && (
-              <>
-                <div className={styles.arrow_back_wrapper} onClick={() => dispatch(moveBack())}>
-                  <img src={backImg} alt="Назад" />
-                </div>
-                <div className="show_page">{displayPage} / 10</div>
-              </>
-            )}
+      {currentPage === 'start' ? (
+        <div className={styles.start__inner}>
+          <img src={logoImg} alt="Логотип" />
+          <img
+            className={styles.arrow_next}
+            src={arrowRightImg}
+            alt="Далее"
+            onClick={() => changePageHandler(1)}
+          />
+        </div>
+      ) : (
+        <div className={styles.inner}>
+          {currentPage !== 11 && (
+            <>
+              <div className={styles.arrow_back_wrapper} onClick={() => dispatch(moveBack())}>
+                <img src={backImg} alt="Назад" />
+              </div>
+              <div className="show_page">{displayPage} / 10</div>
+            </>
+          )}
 
-            {currentPage === 11 && <img src={logoImg} alt="Логотип" />}
-            <div className={styles.exit} onClick={toHomePageHandler}>
-              <img src={exitImg} alt="Закрыть" />
-            </div>
-          </>
-        )}
-      </div>
+          {currentPage === 11 && <img src={logoImg} alt="Логотип" />}
+          <div className={styles.exit} onClick={toHomePageHandler}>
+            <img src={exitImg} alt="Закрыть" />
+          </div>
+        </div>
+      )}
       {currentPage !== 'start' && (
         <div className={styles.page_line_wrapper}>
           <div className={styles.page_line} style={{ width: `${(displayPage * 100) / 11}%` }}></div>

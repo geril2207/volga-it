@@ -1,5 +1,5 @@
-import { useDispatch } from 'hooks/useDispatch'
 import React from 'react'
+import { useDispatch } from 'hooks/useDispatch'
 import { setPage } from 'store/transitions/actions'
 
 const NinthPage = () => {
