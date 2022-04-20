@@ -1,3 +1,5 @@
+$blueGradient: #45c7fa;
+$blue: #2196f3;
 @mixin item-border {
   width: 100%;
   display: flex;
@@ -9,6 +11,8 @@
   border: 1px solid rgba(231, 235, 237, 0.80141);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
   max-width: 300px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 @mixin itemWithImgAfter {
   padding: 27px 0px;
@@ -46,6 +50,7 @@
     text-align: left;
   }
 }
+
 .main_content_title {
   font-family: 'Open Sans';
   font-style: normal;
@@ -97,6 +102,8 @@
   text-align: center;
   color: #425a60;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 .item:first-child {
   margin-top: 25px;
@@ -173,23 +180,52 @@
   @include itemWithImgAfter();
   div {
     max-width: 96px;
+    justify-content: center;
   }
+}
+
+.seventh__item {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .eighth__item {
   @include item-border();
+  position: relative;
   height: 103px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1.96px solid transparent;
+  .eighth__item_img_selected {
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    border-radius: 50%;
+    background: $blue;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_selected {
+    border: 1.96px solid $blue;
+  }
+
+  &_selected .eighth__item_img_selected {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .btn {
-  background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
+  background: linear-gradient(270deg, #45c7fa 0%, $blue 100%);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.03);
   border-radius: 24px;
   border: none;
-}
-
-.selected {
-  border: 1px solid blue;
 }
 
 .grid__container {
@@ -197,6 +233,8 @@
   grid-template-columns: repeat(4, 160px);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
+  max-width: 675px;
+  margin: 0 auto;
 }
 
 .custom__button {
@@ -221,7 +259,3 @@
     cursor: not-allowed;
   }
 }
-
-
-
-

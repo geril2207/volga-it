@@ -13,21 +13,13 @@ const SecondPage: React.FC<IPage> = ({ dispatch }) => {
   return (
     <>
       <div>
-        <h4 className="content__title">
-          What type of glasses are you looking for?
-        </h4>
+        <h4 className="content__title">What type of glasses are you looking for?</h4>
         <div className="item_wrapper">
-          <div
-            className="item first_and_second_item"
-            onClick={clickHandler(210)}
-          >
+          <div className="item first_and_second_item" onClick={clickHandler(210)}>
             <img src={eyeglassesImg} alt="" />
             Eyeglasses
           </div>
-          <div
-            className="item first_and_second_item"
-            onClick={clickHandler(211)}
-          >
+          <div className="item first_and_second_item" onClick={clickHandler(211)}>
             <img src={sunglassesImg} alt="" />
             Sunglasses
           </div>

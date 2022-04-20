@@ -17,7 +17,7 @@ export type KeysStoreTypes = keyof IParamsStore
 
 export const paramsInitState: IParamsStore = {
   gender: null,
-  eyewear_type: 211,
+  eyewear_type: null,
   lenstype: null,
   shade: null,
   frame_size: null,

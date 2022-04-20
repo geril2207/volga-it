@@ -1,8 +1,6 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 160px);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  margin: 0 auto;
+  margin-top: 26px;
 }
 
 .btn {

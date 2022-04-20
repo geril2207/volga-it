@@ -1,6 +1,6 @@
 import React from 'react'
 import welcomeImg from 'assets/img/welcome.png'
-import styles from './StartPage.module.css'
+import styles from './StartPage.module.scss'
 import { useDispatch } from 'hooks/useDispatch'
 import { setPage } from 'store/transitions/actions'
 
@@ -14,8 +14,7 @@ const StartPage = () => {
       <img className={styles.img} src={welcomeImg} alt="Welcome" />
       <h4 className={styles.title}>Let's find your perfect pair!</h4>
       <div className={styles.text}>
-        Take the quiz to easily discover your perfect fit from thousands of
-        styles
+        Take the quiz to easily discover your perfect fit from thousands of styles
       </div>
       <button className={`btn ${styles.btn}`} onClick={toNextPage}>
         Start now

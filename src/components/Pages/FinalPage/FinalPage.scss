@@ -13,3 +13,40 @@
   left: 29px;
   transform: rotate(45deg);
 }
+
+.final__button {
+  margin-top: 50px;
+}
+
+.final__title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  margin-top: 30px;
+  text-align: center;
+  color: #2196f3;
+}
+
+.final__subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 340px;
+  margin: 0 auto;
+  margin-top: 12px;
+  color: #3a4850;
+}
+
+.final__agree {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #5b6971;
+}

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import styles from './FirstPage.module.css'
+import styles from './FirstPage.module.scss'
 import womenImg from 'assets/img/stages/1/women.svg'
 import manImg from 'assets/img/stages/1/man.svg'
 import { Store } from 'store'

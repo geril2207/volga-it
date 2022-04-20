@@ -68,6 +68,7 @@ const components = {
   10: TenthPage,
   11: FinalPage,
   m3: Between23And4,
+  m4: Between23And4,
   start: StartPage,
 }
 

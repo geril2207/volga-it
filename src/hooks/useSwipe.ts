@@ -13,14 +13,17 @@ export const useSwipe = () => {
   }
 
   const touchStartHandler = (e) => {
-    if (e.target.offsetParent.classList.contains('container__scrollable'))
+    if (
+      e.target.offsetParent.classList.contains('container__scrollable') ||
+      e.target.offsetParent.classList.contains('eighth__item')
+    ) {
       return (cords.isElemScrollable = true)
+    }
     cords.start = e.changedTouches[0].screenX
-    cords.isElemScrollable = false
   }
 
   const touchEndHandler = (e) => {
-    if (cords.isElemScrollable) return
+    if (cords.isElemScrollable) return (cords.isElemScrollable = false)
     cords.end = e.changedTouches[0].screenX
     const difference = cords.end - cords.start
     if (difference < -40) skipPageHandler()

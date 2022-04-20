@@ -3,6 +3,7 @@ import { useDispatch } from 'hooks/useDispatch'
 import { moveForward, setPage } from 'store/transitions/actions'
 import BottomLink from '../../BottomLink/BottomLink'
 import { IPage } from '../types'
+import withAnim from 'hoc/withAnim'
 
 const ThirdPage: React.FC<IPage> = () => {
   const dispatch = useDispatch()

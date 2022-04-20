@@ -13,13 +13,13 @@ const SeventhPage: React.FC<IPage> = ({ dispatch }) => {
           How would you define your facial features?
         </h4>
         <div className="item_wrapper">
-          <div className="item third_item" onClick={clickHandler('sharp')}>
+          <div className="item seventh__item" onClick={clickHandler('sharp')}>
             Sharp
           </div>
-          <div className="item third_item" onClick={clickHandler('between')}>
+          <div className="item seventh__item" onClick={clickHandler('between')}>
             Rounded
           </div>
-          <div className="item third_item" onClick={clickHandler('between')}>
+          <div className="item seventh__item" onClick={clickHandler('between')}>
             In between
           </div>
         </div>

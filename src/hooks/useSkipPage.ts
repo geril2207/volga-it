@@ -9,6 +9,7 @@ const pagesToValues = {
   2: 'eyewear_type',
   3.2: 'lenstype',
   4: 'frame_size',
+  4.2: 'frame_size',
   5: 'blue_light',
   6: 'face_shape',
   7: 'facial_features',
@@ -19,7 +20,10 @@ export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
   const dispatch = useDispatch()
 
   const skipPageHandler = () => {
+    if (currentPage === 8 || currentPage === 10) return
     if (pagesToValues[currentPage]) dispatch(setValue(pagesToValues[currentPage], null))
+    if (currentPage === 9) return dispatch(setPage(11))
+    if (currentPage === 4) return dispatch(setPage('m4'))
     dispatch(toPage ? setPage(toPage) : moveForward())
   }
   return skipPageHandler

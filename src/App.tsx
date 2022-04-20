@@ -4,7 +4,8 @@ import { Header, PagesRouter } from './components'
 
 function App() {
   const state = useSelector()
-  console.log(state)
+  console.table(state.params)
+
   return (
     <div className="app">
       <Header />
