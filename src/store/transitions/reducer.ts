@@ -9,14 +9,12 @@ export interface ITranstitionsStore {
 }
 
 export const transitionsInitState: ITranstitionsStore = {
-  currentPage: 8,
+  currentPage: 'start',
   previousPage: [],
   moveTo: 'next',
 }
 
-const nextPage = (
-  currentPage: transitionsCurrentPage
-): transitionsCurrentPage => {
+const nextPage = (currentPage: transitionsCurrentPage): transitionsCurrentPage => {
   switch (currentPage) {
     case 'start':
       return 1
@@ -33,18 +31,12 @@ const nextPage = (
   return 'start'
 }
 
-export const transitionsReducer = (
-  state = transitionsInitState,
-  action: transitionsActionType
-) => {
+export const transitionsReducer = (state = transitionsInitState, action: transitionsActionType) => {
   switch (action.type) {
     case ActionTypes.SET_PAGE:
       const previousPage =
-        action.payload === 'start'
-          ? []
-          : [...state.previousPage, state.currentPage]
-      const moveToNext: transitionsMoveTo =
-        action.payload === 'start' ? 'back' : 'next'
+        action.payload === 'start' ? [] : [...state.previousPage, state.currentPage]
+      const moveToNext: transitionsMoveTo = action.payload === 'start' ? 'back' : 'next'
       return {
         ...state,
         moveTo: moveToNext,
@@ -62,10 +54,7 @@ export const transitionsReducer = (
           previousPage: [],
         }
       }
-      const prevPages = state.previousPage.slice(
-        0,
-        state.previousPage.length - 1
-      )
+      const prevPages = state.previousPage.slice(0, state.previousPage.length - 1)
 
       return {
         ...state,

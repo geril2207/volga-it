@@ -39,10 +39,16 @@ const Header = () => {
           </>
         ) : (
           <>
-            <div className={styles.arrow_back_wrapper} onClick={() => dispatch(moveBack())}>
-              <img src={backImg} alt="Назад" />
-            </div>
-            <div className="show_page">{displayPage} / 10</div>
+            {currentPage !== 11 && (
+              <>
+                <div className={styles.arrow_back_wrapper} onClick={() => dispatch(moveBack())}>
+                  <img src={backImg} alt="Назад" />
+                </div>
+                <div className="show_page">{displayPage} / 10</div>
+              </>
+            )}
+
+            {currentPage === 11 && <img src={logoImg} alt="Логотип" />}
             <div className={styles.exit} onClick={toHomePageHandler}>
               <img src={exitImg} alt="Закрыть" />
             </div>
