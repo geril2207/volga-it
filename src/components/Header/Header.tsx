@@ -1,32 +1,20 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import logoImg from 'assets/img/optimax-logo.png'
 import arrowRightImg from 'assets/img/arrow-right.svg'
 import exitImg from 'assets/img/exit.svg'
 import backImg from 'assets/img/back.svg'
 import styles from './Header.module.scss'
-import { Store } from 'store'
 import { useSelector } from 'hooks/useSelector'
 import { useDispatch } from 'hooks/useDispatch'
 import { moveBack, setPage } from 'store/transitions/actions'
-import {
-  ITranstitionsStore,
-  transitionsCurrentPage,
-} from 'store/transitions/reducer'
+import { ITranstitionsStore, transitionsCurrentPage } from 'store/transitions/reducer'
 import { resetValues } from 'store/params/actions'
 
 const Header = () => {
-  const { currentPage, previousPage }: ITranstitionsStore = useSelector(
-    (state) => state.transitions
-  )
+  const { currentPage }: ITranstitionsStore = useSelector((state) => state.transitions)
   const dispatch = useDispatch()
-  // console.log(currentPage, previousPage)
 
-  const displayPage =
-    currentPage === 'm3'
-      ? 3
-      : currentPage === 'm4'
-      ? 4
-      : Math.floor(+currentPage)
+  const displayPage = currentPage === 'm3' ? 3 : currentPage === 'm4' ? 4 : Math.floor(+currentPage)
 
   function changePageHandler(page: transitionsCurrentPage = 'start') {
     dispatch(setPage(page))
@@ -51,10 +39,7 @@ const Header = () => {
           </>
         ) : (
           <>
-            <div
-              className={styles.arrow_back_wrapper}
-              onClick={() => dispatch(moveBack())}
-            >
+            <div className={styles.arrow_back_wrapper} onClick={() => dispatch(moveBack())}>
               <img src={backImg} alt="Назад" />
             </div>
             <div className="show_page">{displayPage} / 10</div>
@@ -66,10 +51,7 @@ const Header = () => {
       </div>
       {currentPage !== 'start' && (
         <div className={styles.page_line_wrapper}>
-          <div
-            className={styles.page_line}
-            style={{ width: `${(displayPage * 100) / 11}%` }}
-          ></div>
+          <div className={styles.page_line} style={{ width: `${(displayPage * 100) / 11}%` }}></div>
         </div>
       )}
     </header>

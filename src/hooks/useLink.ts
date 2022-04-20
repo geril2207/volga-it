@@ -1,4 +1,4 @@
-import { IParamsStore, KeysStoreTypes } from 'store/params/reducer'
+import { IParamsStore } from 'store/params/reducer'
 import { useSelector } from './useSelector'
 
 export const useLink = () => {

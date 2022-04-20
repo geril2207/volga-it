@@ -20,7 +20,7 @@ export const useSkipPage = (toPage: transitionsCurrentPage | null = null) => {
   const dispatch = useDispatch()
 
   const skipPageHandler = () => {
-    if (currentPage === 8 || currentPage === 10) return
+    if (currentPage === 8 || currentPage === 10 || currentPage === 11) return
     if (pagesToValues[currentPage]) dispatch(setValue(pagesToValues[currentPage], null))
     if (currentPage === 9) return dispatch(setPage(11))
     if (currentPage === 4) return dispatch(setPage('m4'))

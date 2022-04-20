@@ -6,7 +6,7 @@ import { useDispatch } from './useDispatch'
 
 const useSetValueAndMoveForward = () => {
   const dispatch = useDispatch()
-  return (type: KeysStoreTypes, value: number | string | boolean | glassesItemsValue[]) => {
+  return (type: KeysStoreTypes, value: number | string | boolean | glassesItemsValue) => {
     dispatch(setValue(type, value))
     dispatch(moveForward())
   }

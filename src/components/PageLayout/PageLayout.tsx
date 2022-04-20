@@ -1,7 +1,7 @@
 import { IPage } from 'components/Pages/types'
 import { useSelector } from 'hooks/useSelector'
 import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
-import React, { useLayoutEffect, useRef } from 'react'
+import React, {  useRef } from 'react'
 
 interface IPageLayout {
   page: React.FC<IPage>

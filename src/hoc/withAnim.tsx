@@ -2,7 +2,7 @@ import { IPage } from 'components/Pages/types'
 import { useSelector } from 'hooks/useSelector'
 import useSetValueAndMoveForward from 'hooks/useSetValueAndMoveForward'
 import React from 'react'
-import { useRef, useLayoutEffect, FC } from 'react'
+import { useRef, FC } from 'react'
 
 const withAnim = (Component: FC<IPage>) => () => {
   const moveTo = useSelector((state) => state.transitions.moveTo)

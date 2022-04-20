@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { moveBack } from 'store/transitions/actions'
 import { useDispatch } from './useDispatch'
 import { useSkipPage } from './useSkipPage'

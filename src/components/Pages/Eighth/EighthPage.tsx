@@ -1,15 +1,12 @@
 import HorizontalScrollable from 'components/HorizontalDraggable/HorizontalScrollable'
-import withAnim from 'hoc/withAnim'
 import { useDispatch } from 'hooks/useDispatch'
 import { useSelector } from 'hooks/useSelector'
-import React, { useState } from 'react'
+import React from 'react'
 import { setValue } from 'store/params/actions'
 import { moveForward } from 'store/transitions/actions'
 import { IPage } from '../types'
 import styles from './EighthPage.module.scss'
-import { glassesItems, glassesItemsValue } from './EighthPageItems'
-import selectedImg from 'assets/img/selected.svg'
-import { useSelectedItems } from 'hooks/useSelectedItems'
+import { glassesItems } from './EighthPageItems'
 import selectImg from 'assets/img/selected.svg'
 
 const EighthPage: React.FC<IPage> = () => {
