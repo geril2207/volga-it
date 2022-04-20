@@ -8,17 +8,12 @@ import { IPage } from 'components/Pages/types'
 
 const Between23And4: React.FC<IPage> = () => {
   const dispatch = useDispatch()
-  const currentPage: transitionsCurrentPage = useSelector(
-    (state) => state.transitions.currentPage
-  )
-  const textContent =
-    currentPage === 'm3'
-      ? "Let's get to know you!"
-      : 'No worries, we’ve got you!'
+  const currentPage: transitionsCurrentPage = useSelector((state) => state.transitions.currentPage)
+  const textContent = currentPage === 'm3' ? "Let's get to know you!" : 'No worries, we’ve got you!'
   useEffect(() => {
     const timeout = setTimeout(() => {
       dispatch(moveForward())
-    }, 1000)
+    }, 2000)
     return () => {
       clearTimeout(timeout)
     }
