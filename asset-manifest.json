@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/volga-it/static/css/main.a3721680.css",
-    "main.js": "/volga-it/static/js/main.0e0b80a0.js",
+    "main.js": "/volga-it/static/js/main.f4df1dc4.js",
     "static/media/shade.svg": "/volga-it/static/media/shade.996ce818b994c9162b00b9f27475847d.svg",
     "static/media/welcome.png": "/volga-it/static/media/welcome.a3ad0cf69c5acd366bfa.png",
     "static/media/10.svg": "/volga-it/static/media/10.5bed8af37ae013e2bef768554b33f2d1.svg",
@@ -35,10 +35,10 @@
     "static/media/back.svg": "/volga-it/static/media/back.71ab24d8470350e577fd9118f9a94d4a.svg",
     "static/media/arrow-right.svg": "/volga-it/static/media/arrow-right.1e82bb4065704c0f7bd830cb5f0a7a3b.svg",
     "main.a3721680.css.map": "/volga-it/static/css/main.a3721680.css.map",
-    "main.0e0b80a0.js.map": "/volga-it/static/js/main.0e0b80a0.js.map"
+    "main.f4df1dc4.js.map": "/volga-it/static/js/main.f4df1dc4.js.map"
   },
   "entrypoints": [
     "static/css/main.a3721680.css",
-    "static/js/main.0e0b80a0.js"
+    "static/js/main.f4df1dc4.js"
   ]
 }
