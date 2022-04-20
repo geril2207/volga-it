@@ -5,6 +5,7 @@ import BottomLink from '../../BottomLink/BottomLink'
 import { IPage } from '../types'
 
 const SecondPage: React.FC<IPage> = ({ dispatch }) => {
+  
   const clickHandler = (value: 210 | 211) => {
     return () => {
       dispatch('eyewear_type', value)
