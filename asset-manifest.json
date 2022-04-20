@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/volga-it/static/css/main.dc7ec09b.css",
-    "main.js": "/volga-it/static/js/main.c95af8bd.js",
+    "main.css": "/volga-it/static/css/main.a3721680.css",
+    "main.js": "/volga-it/static/js/main.0e0b80a0.js",
     "static/media/shade.svg": "/volga-it/static/media/shade.996ce818b994c9162b00b9f27475847d.svg",
     "static/media/welcome.png": "/volga-it/static/media/welcome.a3ad0cf69c5acd366bfa.png",
     "static/media/10.svg": "/volga-it/static/media/10.5bed8af37ae013e2bef768554b33f2d1.svg",
@@ -26,19 +26,19 @@
     "static/media/like.svg": "/volga-it/static/media/like.3aeb8db209a93e5b4e173af5a4798b33.svg",
     "static/media/women.svg": "/volga-it/static/media/women.4b11f2a9923966af1fd26868273a4efd.svg",
     "static/media/gift.svg": "/volga-it/static/media/gift.3c18877a32016cc17386e89ec65c0d8d.svg",
+    "index.html": "/volga-it/index.html",
     "static/media/dark-shade.svg": "/volga-it/static/media/dark-shade.2dcfe77f4679a808baa4446100da36bb.svg",
     "static/media/light-shade.svg": "/volga-it/static/media/light-shade.25face8a8b62d4ecc92c2d7eb231ab5c.svg",
-    "index.html": "/volga-it/index.html",
     "static/media/crosshair.svg": "/volga-it/static/media/crosshair.d879ead79e3a2df48267f6a9b5006296.svg",
     "static/media/exit.svg": "/volga-it/static/media/exit.579ae2a50beeba14133062687b587574.svg",
     "static/media/selected.svg": "/volga-it/static/media/selected.9c58eafca215225e23c373b45f44c8dc.svg",
     "static/media/back.svg": "/volga-it/static/media/back.71ab24d8470350e577fd9118f9a94d4a.svg",
     "static/media/arrow-right.svg": "/volga-it/static/media/arrow-right.1e82bb4065704c0f7bd830cb5f0a7a3b.svg",
-    "main.dc7ec09b.css.map": "/volga-it/static/css/main.dc7ec09b.css.map",
-    "main.c95af8bd.js.map": "/volga-it/static/js/main.c95af8bd.js.map"
+    "main.a3721680.css.map": "/volga-it/static/css/main.a3721680.css.map",
+    "main.0e0b80a0.js.map": "/volga-it/static/js/main.0e0b80a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc7ec09b.css",
-    "static/js/main.c95af8bd.js"
+    "static/css/main.a3721680.css",
+    "static/js/main.0e0b80a0.js"
   ]
 }
