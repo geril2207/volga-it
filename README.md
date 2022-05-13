@@ -1,8 +1,10 @@
+## Project available on github pages https://ilya2207.github.io/volga-it/
+
 # How to start project
 
 ## First step
 
-Git clone
+Git clone https://github.com/ilya2207/volga-it.git
 
 ## Second step
 
