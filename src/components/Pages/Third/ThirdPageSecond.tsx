@@ -13,7 +13,7 @@ const ThirdPageSecond: React.FC<IPage> = ({ dispatch }) => {
       <div>
         <h4 className="content__title">Do you need vision correction?</h4>
         <div className="item_wrapper">
-          <div className="item third_item" onClick={clickHandler(5)}>
+          <div className="item third_item" onClick={clickHandler(6)}>
             Near Vision
           </div>
           <div className="item third_item" onClick={clickHandler(6)}>

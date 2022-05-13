@@ -8,6 +8,7 @@ const pagesToValues = {
   1: 'gender',
   2: 'eyewear_type',
   3.2: 'lenstype',
+  3: 'lenstype',
   4: 'frame_size',
   4.2: 'frame_size',
   5: ['blue_light', 'shade'],
