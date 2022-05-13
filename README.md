@@ -1,3 +1,17 @@
+# How to start project
+
+## First step
+
+Git clone
+
+## Second step
+
+Yarn / npm install
+
+## Third step
+
+Yarn start / npm run start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
